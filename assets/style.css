@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+/* Set background color for entire webpage */
+body {
+    background-color:#e0cdbe;
+}
+
+/* No bullet points for all ul lists on page (nav and contact links) */
+ul {
+    list-style: none;
+}
+
+/* Remove underline from all links in page and set link text color to white  */
+a {
+    text-decoration: none;
+    color:white;
+}
+
+
+/* Set header properties - contains the h1 and the nav links */
+header {
+    background-color:#517470;
+    margin:0;
+    padding: 2%;
+    color:white;
+}
+
+
+h1 {
+    display:inline-block;
+    font-size:48px;
+}
+
+
+nav {
+    vertical-align: center;
+    margin-right:1%;
+    float:right;
+    font-size: 25px;
+}
+
+nav ul li {
+    display:inline-block;
+    border: solid 2px white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* About me section - includes a photo and a short paragraph that are displayed next to eachother on the page */
+#about-me {
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+    padding:25px;
+
+}
+
+#about-me img {
+    width:20%;
+    height:auto;
+}
+
+.about-me-content {
+    max-width: 50%;
+    margin-left:3%;
+}
+
+/* My work section with example photos that act as links - in a flexbox w header and then images are in another separate flexbox */
+#my-work {
+    display:flex;
+    margin-right:10%;
+}
+
+#my-work h2 {
+    margin-left:7%;
+    margin-right:5%;
+    padding:2%;
+    border-right:#517470 solid 4px;
+}
+
+.my-work-content {
+    display:flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    width: 75%;
+    
+}
+
+.workimg {
+    flex-grow:1;
+    position:relative;
+}
+
+#work1 {
+    flex-grow:2;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+#work1:hover .overlay {
+    opacity: 1;
+  }
+  
+/* .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  } */ 
+
+
+/* Contact me links at the bottom of the page
+Centering, borders, size, ect */
+#contact-me {
+    text-align: center;
+    background-color:#517470;
+    padding:20px;
+}
+
+#contact-me li {
+    display:inline-block;
+    font-size: 25px;
+    padding:15px;
+    border-bottom:white solid 2px;
+    border-top:white solid 2px;
+    margin: 0 20px 0 20px
+}
+
+#contact-me a {
+    max-width: 25%;
+}
