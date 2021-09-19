@@ -1,15 +1,20 @@
 :root {
     --sagegreen:#517470;
     --darkgreen:#013220;
+    --mustard: #d39902; 
+    --pink:#e39197;
 }
-
-
 
 * {
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Set background color for entire webpage */
 body {
     background-color:#e0cdbe;
@@ -30,30 +35,52 @@ a {
 /* Set header properties - contains the h1 and the nav links */
 header {
     background-color:var(--sagegreen);
-    margin:0;
-    padding: 2%;
     color:white;
+    padding: 2%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 h1 {
-    display:inline-block;
     font-size:48px;
 }
 
-
+/* navigation properties - font size based on viewport size & nav links border settings */
 nav {
-    vertical-align: center;
     margin-right:1%;
-    float:right;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
-nav ul li {
+nav li {
     display:inline-block;
     border: solid 2px white;
     border-radius: 5px;
     padding: 10px;
+    margin-left:3px;
+}
+
+nav li:hover {
+    box-shadow: 0 0 10px var(--pink);
+}
+
+.banner {
+    width:100%;
+    height:300px;
+    background-image: url(./images/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    position:relative;
+}
+
+.banner h3 {
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    font-size: 1.5vw;
+    color:white;
+    text-shadow: 0px 0px 10px var(--mustard);
 }
 
 /* About me section - includes a photo and a short paragraph that are displayed next to eachother on the page */
@@ -64,20 +91,23 @@ nav ul li {
     align-items: center;
     flex-direction: row;
     padding:25px;
-    border:#517470 solid 2px;
-    margin: 2% 5% 2% 5%;
+    border:var(--sagegreen) solid 2px;
+    margin: 2%;
 }
+
 
 #about-me img {
-    max-width: 400px;
+    max-width: 300px;
+    height: auto;
+    min-width: 100px;
 }
-
+/* heading and photo in about me section into a flexbox */
 .intro {
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-content: center;
-    width:50%;
+    width:25%;
     margin:2%;
     border-right:var(--sagegreen) solid 4px;
     padding: 2%;
@@ -132,13 +162,14 @@ nav ul li {
 
 .portfolio-content img {
     width:100%;
-    max-width:300px;
+    max-width:250px;
     border-radius: 10px;
+    border:var(--mustard) solid 2px;
+    flex-shrink: 1;
 }
 
 .firstapp img {
-    max-width: 500px;
-    border-radius: 10px;
+    max-width: 400px;
 }
 
 .firstapp, .child {
@@ -158,9 +189,7 @@ nav ul li {
 
 /* Have links glow when hovering over them */
 
-/* .portfolio-content a:hover {
-    box-shadow: 10px 10px 5px var(--sagegreen);
-} */
+
 
 
 
@@ -186,6 +215,10 @@ Centering, borders, size, ect */
     margin: 0 20px 0 20px
 }
 
+#contact-me li:hover {
+    text-shadow: 0px 0px 10px var(--pink);
+}
+
 #contact-me a {
     max-width: 25%;
 }
@@ -199,16 +232,13 @@ Centering, borders, size, ect */
 
     }
 
-    #about-me {
+    #about-me, .portfolio-content {
         flex-direction:column;
     }
 
     .intro {
         border-right:none;
         border-bottom:var(--sagegreen) solid 4px;
-    }
-    .portfolio-content {
-        flex-direction: column;
     }
 
 }
@@ -222,7 +252,7 @@ Centering, borders, size, ect */
     }
     #portfolio {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
     #porfolio h2 {
