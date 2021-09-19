@@ -17,7 +17,24 @@ This porfolio includes:
 # Mock-Up
 An example of the web applicaitions appearance and functionality: 
 
+## Generic Laptop:
 
+<img src="assets/images/Laptop1.jpg">
+<img src="assets/images/Laptop2.jpg">
+<br><br>
+
+## iPad (768px viewport)
+
+<img src="assets/images/iPad1.jpg">
+<img src="assets/images/iPad2.jpg">
+<img src="assets/images/iPad3.jpg">
+<br><br>
+
+## iPhone (375px viewport)
+
+<img src="assets/images/iPhone1.jpg">
+<img src="assets/images/iPhone2.jpg">
+<img src="assets/images/iPhone3.jpg">
 
 # Github Deployed Link
 
