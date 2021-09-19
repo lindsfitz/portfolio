@@ -87,10 +87,9 @@ nav li:hover {
 #about-me {
     font-size:20px;
     display:flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding:25px;
+    padding:0;
     border:var(--sagegreen) solid 2px;
     margin: 2%;
 }
@@ -99,23 +98,25 @@ nav li:hover {
 #about-me img {
     max-width: 300px;
     height: auto;
-    min-width: 100px;
+    width:100%;
+    margin:2% 5% 2% 2%;
 }
 /* heading and photo in about me section into a flexbox */
 .intro {
     display:flex;
-    flex-direction: column;
-    justify-content:center;
+    flex-direction: row;
+    justify-content: center;
     align-content: center;
-    width:25%;
+    width:75%;
     margin:2%;
-    border-right:var(--sagegreen) solid 4px;
+    border-left:var(--sagegreen) solid 4px;
     padding: 2%;
 }
 
-.intro h2 {
+#about-me h2 {
     text-align: center;
-    margin-bottom:1%;
+    margin-left:3%;
+    margin-right:3%;
     color:var(--darkgreen);
     text-shadow: 1px 1px 1px #ffffff;
 }
@@ -130,15 +131,11 @@ nav li:hover {
 
 /* My work header - align on the left with photos on the right & add dividing line */
 #portfolio h2 {
-    margin-left:3%;
-    margin-right:3%;
+    margin: auto 3% auto 3%;
     padding:2%;
     color:var(--darkgreen);
     text-shadow: 1px 1px 1px #ffffff;
     font-size: 40px;
-    margin-top: auto;
-    margin-bottom: auto;
-    
 }
 
 /* Separate flexbox for just the photos on this section - parent div class */
@@ -187,12 +184,6 @@ nav li:hover {
     bottom: 40px;
 }
 
-/* Have links glow when hovering over them */
-
-
-
-
-
 /* Contact me links at the bottom of the page
 Centering, borders, size, ect */
 #contact-me {
@@ -225,31 +216,24 @@ Centering, borders, size, ect */
 
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size:40px;
+        font-size:4vw;
     }
     nav {
-        font-size: 13px;
-
+        font-size: 2vw;
     }
 
-    #about-me, .portfolio-content {
+    #about-me, .portfolio-content, .intro {
         flex-direction:column;
     }
 
     .intro {
-        border-right:none;
-        border-bottom:var(--sagegreen) solid 4px;
+        border-left: none;
+        border-top: var(--sagegreen) solid 4px;
     }
 
 }
 
 @media screen and (max-width: 576px) {
-    header h1 {
-        font-size: 4vw;
-    }
-    nav {
-        font-size: 2vw;
-    }
     #portfolio {
         flex-direction: column;
         justify-content: flex-start;
@@ -266,5 +250,6 @@ Centering, borders, size, ect */
     }
     #contact-me li {
         display:block;
+        margin: 2% auto 2% auto;
     }
 }

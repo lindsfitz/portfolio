@@ -12,7 +12,6 @@ This porfolio includes:
 
 **Application must be:**
 - Deployed at a live URL, load without error, repo must contain application code
-- 
 
 
 # Mock-Up
@@ -21,3 +20,5 @@ An example of the web applicaitions appearance and functionality:
 
 
 # Github Deployed Link
+
+[Link to Deployed Web Application](https://lindsfitz.github.io/portfolio/)
