@@ -187,14 +187,26 @@ nav li:hover {
 /* Contact me links at the bottom of the page
 Centering, borders, size, ect */
 #contact-me {
-    text-align: center;
+    display:flex;
+    align-items: center;
     background-color:var(--sagegreen);
-    padding:20px;
+    /* padding:20px; */
+    width:100%;
 }
 
-#contact-me h1 {
+#contact-me h2 {
     color:var(--darkgreen);
+    font-size: 40px;
     text-shadow: 1px 1px 1px #ffffff;
+    margin: auto 3% auto 3%;
+    padding:2%;
+    border-right: white solid 4px
+}
+
+#contact-me ul {
+    width:75%;
+    margin: 2%;
+    padding:2%;
 }
 
 #contact-me li {
@@ -230,6 +242,23 @@ Centering, borders, size, ect */
         border-left: none;
         border-top: var(--sagegreen) solid 4px;
     }
+    .intro img {
+        align-self: center;
+    }
+    #contact-me {
+        flex-direction: column;
+        justify-content:center;
+    }
+    #contact-me h2 {
+        border-right:none;
+        border-bottom:white solid 4px;
+    }
+
+    #contact-me li {
+        display:block;
+        margin: 2% auto 2% auto;
+        text-align: center;
+    }
 
 }
 
@@ -245,11 +274,7 @@ Centering, borders, size, ect */
     }
     .portfolio-content {
         border-left:0;
-        border-top:var(--sagegreen) solid 6px;
+        border-top:var(--sagegreen) solid 4px;
         padding-top: 10px;
-    }
-    #contact-me li {
-        display:block;
-        margin: 2% auto 2% auto;
     }
 }
