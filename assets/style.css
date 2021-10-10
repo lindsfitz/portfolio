@@ -17,7 +17,9 @@ html {
 
 /* Set background color for entire webpage */
 body {
-    background-color:#e0cdbe;
+    background: linear-gradient(#e0cdbe 75%, #517470 84%);
+    /* background-color:#e0cdbe; */
+    font-family: 'Raleway';
 }
 
 /* No bullet points for all ul lists on page (nav and contact links) */
@@ -25,27 +27,32 @@ ul {
     list-style: none;
 }
 
+
+
 /* Remove underline from all links in page and set link text color to white  */
-a {
+nav a {
     text-decoration: none;
-    color:white;
+    color:var(--sagegreen);
 }
 
 
 /* Set header properties - contains the h1 and the nav links */
 header {
-    background-color:var(--sagegreen);
-    color:white;
+    background-color:transparent;
+    color:var(--sagegreen);
     padding: 2%;
     display:flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
+    background-image: url(./images/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    width:100%;
+    height:400px;
 }
 
 
-h1 {
-    font-size:48px;
-}
 
 /* navigation properties - font size based on viewport size & nav links border settings */
 nav {
@@ -55,42 +62,22 @@ nav {
 
 nav li {
     display:inline-block;
-    border: solid 2px white;
-    border-radius: 5px;
     padding: 10px;
     margin-left:3px;
 }
 
 nav li:hover {
-    box-shadow: 0 0 10px var(--pink);
+    border-bottom: var(--pink) 2px solid;
 }
 
-.banner {
-    width:100%;
-    height:300px;
-    background-image: url(./images/banner2.jpg);
-    background-size: cover;
-    background-position: center;
-    position:relative;
-}
-
-.banner h3 {
-    position: absolute;
-    bottom: 5%;
-    right: 3%;
-    font-size: 1.5vw;
-    color:white;
-    text-shadow: 0px 0px 10px var(--mustard);
-}
 
 /* About me section - includes a photo and a short paragraph that are displayed next to eachother on the page */
 #about-me {
     font-size:20px;
-    display:flex;
+    /* display:flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: row; */
     padding:0;
-    border:var(--sagegreen) solid 2px;
     margin: 2%;
 }
 
@@ -109,22 +96,23 @@ nav li:hover {
     align-content: center;
     width:75%;
     margin:2%;
-    border-left:var(--sagegreen) solid 4px;
+    /* border-left:var(--sagegreen) solid 4px; */
     padding: 2%;
 }
 
-#about-me h2 {
+/* #about-me h2 {
     text-align: center;
     margin-left:3%;
     margin-right:3%;
     color:var(--darkgreen);
     text-shadow: 1px 1px 1px #ffffff;
-}
+} */
 
 
 /* My work section with example photos that act as links - in a flexbox w header and then images are in another separate flexbox */
 #portfolio {
     display:flex;
+    flex-direction: column;
     margin-right:5%;
     width:100%;
 }
@@ -133,47 +121,83 @@ nav li:hover {
 #portfolio h2 {
     margin: auto 3% auto 3%;
     padding:2%;
-    color:var(--darkgreen);
-    text-shadow: 1px 1px 1px #ffffff;
-    font-size: 40px;
+    color:rgba(1, 50, 32, 0.5);
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
 }
 
 /* Separate flexbox for just the photos on this section - parent div class */
 .portfolio-content {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width:100%;
-    border-left: var(--sagegreen) solid 4px;
 }
+
+
+.portfolio-content img {
+    width:100%;
+    max-width:400px;
+    border-radius: 10px;
+    border:black solid 3px;
+    flex-shrink: 1;
+    display:block;
+}
+
+.firstapp {
+    display:flex;
+    flex-direction: row;
+}
+
+.firstapp img {
+    max-width: 500px;
+}
+
+
+.container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--sagegreen);
+    border-radius: 10px;
+}
+
+.container:hover .overlay {
+    opacity: 0.9;
+}
+
+.otext {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
 /* secondary photo apps into another flexbox */
 .secondary {
     display:flex;
     justify-content: space-evenly;
-    flex-wrap:wrap;
     flex-direction: row;
-    width:50%;
-}
-
-.portfolio-content img {
     width:100%;
-    max-width:250px;
-    border-radius: 10px;
-    border:var(--mustard) solid 2px;
-    flex-shrink: 1;
 }
 
-.firstapp img {
-    max-width: 400px;
-}
-
-.firstapp, .child {
-    position:relative;
-}
-
-.title1, .title {
+.title {
     background: rgb(81, 116, 112, 0.7);
     padding:10px;
     border-radius: 5px;
@@ -181,49 +205,69 @@ nav li:hover {
     color:white;
     position:absolute;
     left:15px;
-    bottom: 40px;
+    bottom: 12px;
+    display:none;
+}
+
+.title1, .title:hover {
+    display:inline;
 }
 
 /* Contact me links at the bottom of the page
 Centering, borders, size, ect */
 #contact-me {
     display:flex;
+    flex-direction: column;
     align-items: center;
-    background-color:var(--sagegreen);
+    margin-top: 100px;
+    /* background-color:var(--sagegreen); */
     /* padding:20px; */
     width:100%;
 }
 
 #contact-me h2 {
-    color:var(--darkgreen);
-    font-size: 40px;
-    text-shadow: 1px 1px 1px #ffffff;
+    color:rgba(1, 50, 32, 0.5);
+    font-size: 12px;
+    font-family: Helvetica, sans-serif;
     margin: auto 3% auto 3%;
     padding:2%;
-    border-right: white solid 4px
+    font-weight: bolder;
 }
 
-#contact-me ul {
-    width:75%;
-    margin: 2%;
-    padding:2%;
+#btn-div {
+    margin: 2px auto 2px auto;
 }
 
-#contact-me li {
-    display:inline-block;
-    font-size: 20px;
-    padding:15px;
-    border-bottom:white solid 2px;
-    border-top:white solid 2px;
-    margin: 0 20px 0 20px
+#submit {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--sagegreen);
+    color:white;
+    margin: 2px auto 2px auto;
+    
 }
 
-#contact-me li:hover {
-    text-shadow: 0px 0px 10px var(--pink);
+#contact-links {
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
 }
+
 
 #contact-me a {
     max-width: 25%;
+    color: white;
+}
+
+.icon-links {
+    margin: 15px;
+    text-align: center;
+}
+
+
+.icon-links span:hover {
+    border-bottom: 2px solid var(--pink);
+    color: rgba(0, 0, 0, 0.54)
 }
 
 @media screen and (max-width: 768px) {
@@ -254,11 +298,7 @@ Centering, borders, size, ect */
         border-bottom:white solid 4px;
     }
 
-    #contact-me li {
-        display:block;
-        margin: 2% auto 2% auto;
-        text-align: center;
-    }
+    
 
 }
 
