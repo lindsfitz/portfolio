@@ -19,22 +19,18 @@ An example of the web applicaitions appearance and functionality:
 
 ## Generic Laptop:
 
-<img src="assets/images/Laptop1.jpg">
-<img src="assets/images/Laptop2.jpg">
+![](./assets/images/laptop1.jpg)
+![](./assets/images/laptop2.jpg)
+![](./assets/images/laptop3.jpg)
+
 <br><br>
 
-## iPad (768px viewport)
-
-<img src="assets/images/iPad1.jpg">
-<img src="assets/images/iPad2.jpg">
-<img src="assets/images/iPad3.jpg">
-<br><br>
 
 ## iPhone (375px viewport)
 
-<img src="assets/images/iPhone1.jpg">
-<img src="assets/images/iPhone2.jpg">
-<img src="assets/images/iPhone3.jpg">
+![](./assets/images/iphone1.jpg)
+![](./assets/images/iphone2.jpg)
+![](./assets/images/iphone3.jpg)
 
 # Github Deployed Link
 
