@@ -33,14 +33,23 @@
 
         <!-- <h2>About Me</h2> -->
         <div class="intro">
-            <img src="./assets/images/myphoto.jpeg" alt="A Photo of Lindsay">
-            <p>
-                Here is where I will put a little bit about me!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde voluptate cum quae dolorum fugiat
-                inventore vitae veniam tempora animi impedit, dicta optio rerum! Doloribus consectetur dolor eveniet
-                perferendis quisquam temporibus.
-            </p>
+            <!-- <img src="./assets/images/myphoto.jpeg" alt="A Photo of Lindsay"> -->
+            <h1>Thanks for visiting.</h1><br>
+            <div id="content">
+                <div>
+                    <h3>I am a Seattle-based student in the University of Washington Full-Stack Development Certificate
+                        Program.</h3>
+                    <p>Highly motivated developer who is pationate about complex problem-solving.</p>
+                </div>
+                <img src="./assets/images/headshot.png" alt="photo of me">
+            </div>
+            <br>
+            <div id="btns">
+                <a href="#portfolio"><button>Preview Work</button></a>
+                <a href="#contact-me"><button>Reach Out</button></a>
+            </div>
         </div>
+
 
     </section>
     <br><br><br>
@@ -50,66 +59,95 @@
 
         <div class="portfolio-content">
 
-            <div class="firstapp">
-                <div class="container">
-                    <a href="https://evanhosni.github.io/wackywiki/" target="_blank"><img alt="#"
-                            src="assets/images/wackywiki1.jpg"></a>
-                    <div class="overlay">
-                        <p class="otext">View Deployed Page</p>
+            <div class="primary">
+
+                <a href="https://evanhosni.github.io/wackywiki/" target="_blank"><img alt="#"
+                        src="assets/images/wackywiki1.jpg"></a>
+
+                <div class="primary-details">
+                    <h5>WackyWiki</h5>
+                    <p>WackyWiki is a very user friendly online version of MadLibz [Noun] that allows you to select any
+                        topic from Wikipedia and input how ever many and whatever zany nouns, adjectives, verbs, and
+                        adverbs you would like, to randomly replace words in the article.</p>
+                    <h6>Technologies & Tools:</h6>
+                    <p>HTML, CSS, JavaScript, JQuery, APIs, Bulma, Text-to-Speech</p>
+                    <div class="proj-btns">
+                        <div class="proj-links">
+                            <a href="https://github.com/evanhosni/wackywiki" target="_blank"><span
+                                    class="material-icons">code</span></a>
+                            <br>
+                            <p>Github Repository</p>
+                        </div>
+                        <div class="proj-links">
+                            <a href="https://evanhosni.github.io/wackywiki/" target="_blank"><span
+                                    class="material-icons">open_in_browser</span></a>
+                            <br>
+                            <p>View Webpage</p>
+                        </div>
                     </div>
                 </div>
-                <div class="firstapp-details">
-                    <h5>WackyWiki</h5>
-                    <h6>Technologies</h6>
-                    <p>HTML,CSS,JavaScript</p>
-                    <a href="https://github.com/evanhosni/wackywiki" target="_blank"><span
-                            class="material-icons">code</span></a>
-                    <br>
-                    <p>Github Repository</p>
-                </div>
-                <!-- https://github.com/evanhosni/wackywiki -->
+
             </div>
 
             <div class="secondary">
                 <div class="child">
-                    <div class="container">
-                        <a href="https://lindsfitz.github.io/weather-dashboard/" target="_blank"><img alt="#"
-                                src="assets/images/weather-mockup.jpg"></a>
-                        <div class="overlay">
-                            <p class="otext">View Deployed Page</p>
+
+                    <a href="https://lindsfitz.github.io/weather-dashboard/" target="_blank"><img alt="#"
+                            src="assets/images/weather-mockup.jpg"></a>
+
+                    <div class="secondary-details">
+                        <h5>Weather Dashboard</h5>
+                        <p>This application uses the OpenWeather API to retrieve weather data for cities. This data is
+                            used to display a weather dashboard for multiple cities that is dynamically updated. The
+                            past searches are saved and can be reused as the search input by clicking on them.</p>
+                        <h6>Technologies & Tools:</h6>
+                        <p>HTML, CSS, JavaScript, JQuery, API, Moment.js, Bootstrap</p>
+                        <div class="proj-btns">
+                            <div class="proj-links">
+                                <a href="https://github.com/lindsfitz/weather-dashboard" target="_blank"><span
+                                        class="material-icons">code</span></a>
+                                <br>
+                                <p>Github Repository</p>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://lindsfitz.github.io/weather-dashboard/" target="_blank"><span
+                                        class="material-icons">open_in_browser</span></a>
+                                <br>
+                                <p>View Webpage</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="secondary-details">
-                        <h5>WackyWiki</h5>
-                        <h6>Technologies</h6>
-                        <p>HTML,CSS,JavaScript</p>
-                        <a href="https://github.com/lindsfitz/weather-dashboard" target="_blank"><span
-                                class="material-icons">code</span></a>
-                        <br>
-                        <p>Github Repository</p>
-                    </div>
-                    <!-- https://github.com/lindsfitz/weather-dashboard -->
                 </div>
 
                 <div class="child">
-                    <div class="container">
-                        <a href="https://lindsfitz.github.io/work-day-schedule/" target="_blank"><img alt="#"
-                                src="assets/images/schedule-mockup.jpg"></a>
-                        <div class="overlay">
-                            <p class="otext">View Deployed Page</p>
+
+                    <a href="https://lindsfitz.github.io/work-day-schedule/" target="_blank"><img alt="#"
+                            src="assets/images/schedule-mockup.jpg"></a>
+
+                    <div class="secondary-details">
+                        <h5>Work Day Scheduler</h5>
+                        <p>This calendar application allows a user to save events for each hour of the day. The app is
+                            dynamically updated and allows employees with busy schedules to manage time effectively as
+                            they can visualize all of their important events for the day.</p>
+                        <h6>Technologies & Tools</h6>
+                        <p>HTML, CSS, JavaScript, JQuery, Moment.js, Bootstrap</p>
+                        <div class="proj-btns">
+                            <div class="proj-links">
+                                <a href="https://github.com/lindsfitz/work-day-schedule" target="_blank">
+                                    <span class="material-icons">code</span>
+                                </a>
+                                <br>
+                                <p>Github Repository</p>
+                            </div>
+                            <div class="proj-links">
+                                <a href="https://lindsfitz.github.io/work-day-schedule/" target="_blank"><span
+                                        class="material-icons">open_in_browser</span></a>
+                                <br>
+                                <p>View Webpage</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="secondary-details">
-                        <h5>WackyWiki</h5>
-                        <h6>Technologies</h6>
-                        <p>HTML,CSS,JavaScript</p>
-                        <a href="https://github.com/lindsfitz/work-day-schedule" target="_blank">
-                            <span class="material-icons">code</span>
-                        </a>
-                        <br>
-                        <p>Github Repository</p>
-                    </div>
-                    <!-- https://github.com/lindsfitz/work-day-schedule -->
+
                 </div>
             </div>
         </div>

@@ -3,7 +3,10 @@
     --darkgreen:#013220;
     --mustard: #d39902; 
     --pink:#e39197;
+    --lighttan:#e0cdbe;
 }
+
+/*-------------WHOLE PAGE SETTINGS-------------*/
 
 * {
     box-sizing: border-box;
@@ -15,28 +18,19 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Set background color for entire webpage */
 body {
-    background: linear-gradient(#e0cdbe 75%, #517470 84%);
-    /* background-color:#e0cdbe; */
+    background: linear-gradient(#e0cdbe 79%, #517470 88%);
     font-family: 'Raleway';
 }
 
-/* No bullet points for all ul lists on page (nav and contact links) */
 ul {
     list-style: none;
 }
 
+/*-------------HEADER/NAVIGATION-------------*/
 
 
-/* Remove underline from all links in page and set link text color to white  */
-nav a {
-    text-decoration: none;
-    color:var(--sagegreen);
-}
-
-
-/* Set header properties - contains the h1 and the nav links */
+/* HEADER -- photo bg and overall settings for logo/nav links container */
 header {
     background-color:transparent;
     color:var(--sagegreen);
@@ -52,9 +46,18 @@ header {
     height:400px;
 }
 
+#logo h5 {
+    font-size: 1vw;
+}
 
 
-/* navigation properties - font size based on viewport size & nav links border settings */
+
+/* NAV LINKS - font size based on viewport size & nav links border settings */
+nav a {
+    text-decoration: none;
+    color:var(--sagegreen);
+}
+
 nav {
     margin-right:1%;
     font-size: 1.5vw;
@@ -66,58 +69,87 @@ nav li {
     margin-left:3px;
 }
 
-nav li:hover {
+nav a:hover {
     border-bottom: var(--pink) 2px solid;
+    color:var(--sagegreen);
+    text-decoration: none;
 }
 
+
+/*-------------ABOUT ME INTRO SECTION-------------*/
 
 /* About me section - includes a photo and a short paragraph that are displayed next to eachother on the page */
 #about-me {
     font-size:20px;
-    /* display:flex;
+    display:flex;
     align-items: center;
-    flex-direction: row; */
-    padding:0;
-    margin: 2%;
+    flex-direction: column;
+    padding:50px 0 50px 0;
+    /* margin: 2%; */
+    height: 500px;
+    position:relative;
+    background-color: rgba(160, 136, 117, 0.5);
+    margin: 50px 5% 50px 5%;
+    border-radius: 75px;
 }
 
-
-#about-me img {
-    max-width: 300px;
-    height: auto;
-    width:100%;
-    margin:2% 5% 2% 2%;
-}
-/* heading and photo in about me section into a flexbox */
 .intro {
+    background-color:transparent;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    height: 400px;
+    color:white;
+    /* margin: 100px 20px 100px 20px;  */
+    background-color: var(--darkgreen);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#content {
+    display:flex;
+}
+
+#content img {
+    max-width: 200px;
+    max-height: 200px;
+    width:50%;
+    margin:0 7px 0 7px;
+    border-radius: 10%;
+    border: 1px solid white;
+}
+
+#btns {
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    width:75%;
-    margin:2%;
-    /* border-left:var(--sagegreen) solid 4px; */
-    padding: 2%;
 }
 
-/* #about-me h2 {
-    text-align: center;
-    margin-left:3%;
-    margin-right:3%;
-    color:var(--darkgreen);
-    text-shadow: 1px 1px 1px #ffffff;
-} */
+#about-me button {
+    background-color: var(--sagegreen);
+    color:white;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    margin: 5px;
+}
 
+
+
+
+/*-------------PROJECTS SECTION-------------*/
 
 /* My work section with example photos that act as links - in a flexbox w header and then images are in another separate flexbox */
 #portfolio {
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-right:5%;
     width:100%;
 }
 
-/* My work header - align on the left with photos on the right & add dividing line */
+/* Header */
 #portfolio h2 {
     margin: auto 3% auto 3%;
     padding:2%;
@@ -134,7 +166,7 @@ nav li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    width:100%;
+    width:90%;
 }
 
 
@@ -142,82 +174,92 @@ nav li:hover {
     width:100%;
     max-width:400px;
     border-radius: 10px;
-    border:black solid 3px;
+    border:var(--darkgreen) solid 3px;
     flex-shrink: 1;
     display:block;
 }
 
-.firstapp {
-    display:flex;
-    flex-direction: row;
+.portfolio-content h5 {
+    text-align: center;
+    font-weight:bolder;
 }
 
-.firstapp img {
+.primary {
+    display:flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    margin: 2%;
+}
+
+.primary img {
     max-width: 500px;
 }
 
-
-.container {
-    position: relative;
+.primary-details {
+    margin: 0 3% 0 3%;
+    width:45%;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: var(--sagegreen);
-    border-radius: 10px;
+.proj-btns {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+
 }
 
-.container:hover .overlay {
-    opacity: 0.9;
+.proj-links {
+    text-align: center;
+    font-size: 0.8vw;
+    margin: 2%;
+    color:var(--darkgreen)
+
 }
 
-.otext {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-  }
+.proj-links a {
+    color:white;
+}
+
+.proj-links a:hover {
+    border-bottom: 2px solid var(--pink);
+    color: rgba(0, 0, 0, 0.54)
+
+}
+
 
 /* secondary photo apps into another flexbox */
 .secondary {
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
-    width:100%;
+    width:90%;
+    margin-top: 30px;
 }
 
-.title {
-    background: rgb(81, 116, 112, 0.7);
-    padding:10px;
-    border-radius: 5px;
-    font-size:20px;
-    color:white;
-    position:absolute;
-    left:15px;
-    bottom: 12px;
-    display:none;
+.child {
+    display:flex;
+    flex-direction: column;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
 }
 
-.title1, .title:hover {
-    display:inline;
+.secondary-details {
+    width: 80%;
+    padding: 7px;
+    margin-top: 5px;
 }
+
+
+
+/*-------------CONTACT ME - CONTACT FORM -------------*/
 
 /* Contact me links at the bottom of the page
 Centering, borders, size, ect */
 #contact-me {
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 100px;
     /* background-color:var(--sagegreen); */
@@ -234,23 +276,29 @@ Centering, borders, size, ect */
     font-weight: bolder;
 }
 
+
 #btn-div {
     margin: 2px auto 2px auto;
+    align-self: center;
+    text-align: center;
 }
 
 #submit {
-    padding: 10px;
+    padding: 5px 20px 5px 20px;
     border-radius: 10px;
-    background-color: var(--sagegreen);
+    background-color: var(--darkgreen);
     color:white;
     margin: 2px auto 2px auto;
     
 }
 
+/*-------------CONTACT ME - LINK SECTION @ BOTTOM-------------*/
+
 #contact-links {
     display:flex;
     justify-content: space-between;
     align-content: center;
+    border-top: solid 2px rgba(255, 255, 255, 0.5);
 }
 
 
@@ -262,6 +310,7 @@ Centering, borders, size, ect */
 .icon-links {
     margin: 15px;
     text-align: center;
+    padding-top: 15px;
 }
 
 
@@ -270,33 +319,64 @@ Centering, borders, size, ect */
     color: rgba(0, 0, 0, 0.54)
 }
 
+
+
+/*-------------RESPONSIVE PAGE SETTINGS-------------*/
+
 @media screen and (max-width: 768px) {
-    header h1 {
+    #logo h1 {
         font-size:4vw;
     }
+
     nav {
         font-size: 2vw;
     }
 
-    #about-me, .portfolio-content, .intro {
-        flex-direction:column;
+    .intro {
+        width: 80%;
+        margin-bottom: 20px;
     }
 
-    .intro {
-        border-left: none;
-        border-top: var(--sagegreen) solid 4px;
+    .intro h1 {
+        font-size: 4vw;
     }
-    .intro img {
-        align-self: center;
+
+    #content h3 {
+        font-size: 3vw;
     }
+
+    #content {
+        font-size: 2vw
+    }
+
+    .portfolio-content img {
+        max-width: 500px;
+    }
+
+    .primary, .secondary{
+        flex-direction:column;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .child {
+        width: 100%;
+    }
+
+    .primary-details, .secondary-details {
+        width: 90%;
+    }
+
+    .proj-links {
+        font-size: 2vw;
+    }
+
+
     #contact-me {
         flex-direction: column;
         justify-content:center;
     }
-    #contact-me h2 {
-        border-right:none;
-        border-bottom:white solid 4px;
-    }
+   
 
     
 
@@ -308,13 +388,10 @@ Centering, borders, size, ect */
         justify-content: flex-start;
         align-items: center;
     }
-    #porfolio h2 {
-        margin-left:auto;
-        margin-right:auto;
+
+    #content h3 {
+        font-size: 4vw;
     }
-    .portfolio-content {
-        border-left:0;
-        border-top:var(--sagegreen) solid 4px;
-        padding-top: 10px;
-    }
+    
+    
 }
