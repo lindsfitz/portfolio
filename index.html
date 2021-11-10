@@ -9,31 +9,56 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.8.0/dist/js/uikit-icons.min.js"></script>
 </head>
 
 <header>
-    <div id="logo">
-        <h1>Lindsay Fitzgerald</h1>
-        <h5>FULL-STACK WEB DEVELOPMENT</h5>
+    <div class="uk-position-relative uk-cover-container uk-height-large">
+        <img src="./assets/images/banner2.jpg" alt="" uk-cover>
+        <div class="uk-position-top">
+            <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a href="" class="uk-navbar-item uk-logo">
+                        <div>
+                            Lindsay Fitzgerald
+                            <div class="uk-navbar-subtitle">FULL-STACK WEB DEV</div>
+                        </div>
+                    </a>
 
+                </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <li><a href="#about-me">Home</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact-me">Contact Me</a></li>
+                        <li>
+                            <a href="#">Reach Out</a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    <li><a href="https://github.com/lindsfitz" target="_blank" class="uk-icon-button"
+                                        uk-icon="github"></a></li>
+                                    <li><a href="https://www.linkedin.com/in/lindsay-fitzgerald-847775161/" target="_blank" class="uk-icon-button" uk-icon="linkedin"></a></li>
+                                    <li><a href="./assets/LF-Resume.pdf" target="_blank" class="uk-icon-button" uk-icon="file-text"></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-    <nav>
-        <ul>
-            <li><a href="#about-me">Home</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact-me">Contact Me</a></li>
-        </ul>
-    </nav>
+
 </header>
 
 
 <main>
-    <section id="about-me">
+    <div class="uk-container uk-container-expand" id="about-me">
 
         <!-- <h2>About Me</h2> -->
-        <div class="intro">
-            <!-- <img src="./assets/images/myphoto.jpeg" alt="A Photo of Lindsay"> -->
+        <div class="uk-container uk-container-medium" id="intro">
             <h1>Thanks for visiting.</h1><br>
             <div id="content">
                 <div>
@@ -45,23 +70,172 @@
             </div>
             <br>
             <div id="btns">
-                <a href="#portfolio"><button>Preview Work</button></a>
-                <a href="#contact-me"><button>Reach Out</button></a>
+                <a href="#portfolio"><button class="uk-button uk-button-default">Preview Work</button></a>
+                <a href="#contact-me"><button class="uk-button uk-button-default">Reach Out</button></a>
             </div>
         </div>
 
 
-    </section>
+    </div>
     <br><br><br>
-    <section id="portfolio">
 
-        <h2>PROJECTS</h2>
 
-        <div class="portfolio-content">
+
+    <div class="uk-container-expand">
+        <h6 class="uk-text-meta uk-text-center">PROJECTS</h6>
+        <div class="uk-flex uk-flex-column uk-flex-around uk-text-center">
+
+            <div class='uk-flex uk-flex-around uk-flex-wrap'>
+                <div class='uk-width-xlarge@m'>
+                    <div class="uk-card uk-card-hover uk-margin">
+                        <div class="uk-card-media-top">
+                            <img src="assets/images/bullet-journal.png" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">BulletJournal Squared</h3>
+                            <p class="uk-text-meta">Lorem ipsum sit amet, consectetur adipiscing elit, sed do eiusmod
+                                tempor
+                                incididunt
+                                ut labore et dolore magna aliqua.</p>
+                            <h6>Technologies & Tools:</h6>
+                            <p>HTML, CSS, JavaScript, JQuery, APIs, Bulma, Text-to-Speech</p>
+                            <div class="uk-card-footer">
+                                <a href="https://github.com/lindsfitz/bulletjournal" target="_blank"
+                                    class="uk-icon-button uk-margin-small-right" uk-icon="code"></a>
+                                <a href="https://bullet-journal-squared.herokuapp.com/" target="_blank"
+                                    class="uk-icon-button" uk-icon="push"></a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class='uk-width-xlarge@m'>
+                    <div class="uk-card uk-card-hover uk-card-small">
+                        <div class="uk-card-media-top">
+                            <img src="assets/images/wackywiki1.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">WackyWiki</h3>
+                            <p class="uk-text-meta">WackyWiki is a very user friendly online version of MadLibz [Noun]
+                                that
+                                allows you to select any topic from Wikipedia and input how ever many and whatever zany
+                                nouns, adjectives, verbs, and adverbs you would like, to randomly replace words in the
+                                article.</p>
+                            <h6>Technologies & Tools:</h6>
+                            <p>HTML, CSS, JavaScript, JQuery, APIs, Bulma, Text-to-Speech</p>
+                            <div class="uk-card-footer">
+                                <a href="https://github.com/lindsfitz/wackywiki" target="_blank"
+                                    class="uk-icon-button uk-margin-small-right" uk-icon="code"></a>
+                                <a href="https://evanhosni.github.io/wackywiki/" target="_blank" class="uk-icon-button"
+                                    uk-icon="push"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <br>
+
+            <div class="uk-flex uk-flex-wrap uk-flex-around">
+
+                <div class="uk-card uk-card-hover uk-margin uk-width-large@m">
+                    <div class="uk-card-media-top">
+                        <img src="assets/images/schedule-mockup.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Tech Blog</h3>
+                        <p class="uk-text-meta">
+                            Writing about tech can be just as important as making it. Developers spend plenty of time
+                            creating new applications and debugging existing codebases, but most developers also spend
+                            at least some of their time reading and writing about technical concepts, recent
+                            advancements and new technologies.
+                        </p>
+                        <h6>Technologies & Tools</h6>
+                        <p>HTML, CSS, JavaScript, JQuery, Moment.js, Bootstrap</p>
+                        <div class="uk-card-footer">
+                            <a href="https://github.com/lindsfitz/tech-blog" target="_blank"
+                                class="uk-icon-button uk-margin-small-right" uk-icon="code"></a>
+                            <a href="https://evanhosni.github.io/wackywiki/" target="_blank" class="uk-icon-button"
+                                uk-icon="push"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="uk-card uk-card-hover uk-margin uk-width-large@m">
+                    <div class="uk-card-media-top">
+                        <img src="assets/images/note-taker.png" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Note Taker</h3>
+                        <p class="uk-text-meta">
+                            This application can be used to write and save notes. It uses an Express.js back-end to save
+                            and
+                            retrieve previously entered notes. Once you are done with a stored note, you can click on
+                            the
+                            icon
+                            to permanently remove the note. Additionally, this application is deployed via Heroku.
+                        </p>
+                        <h6>Technologies & Tools</h6>
+                        <p>HTML, CSS, JavaScript, JQuery, Moment.js, Bootstrap</p>
+                        <div class="uk-card-footer">
+
+                            <a href="https://github.com/lindsfitz/note-taker" target="_blank"
+                                class="uk-icon-button uk-margin-small-right" uk-icon="code"></a>
+                            <a href="https://lindsfitznotetaker.herokuapp.com/" target="_blank" class="uk-icon-button"
+                                uk-icon="push"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="uk-card uk-card-hover uk-margin uk-width-large@m">
+                    <div class="uk-card-media-top">
+                        <img src="assets/images/weather-mockup.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Weather Dashboard</h3>
+                        <p class="uk-text-meta">This application uses the OpenWeather API to retrieve weather data for
+                            cities.
+                            This
+                            data is
+                            used to display a weather dashboard for multiple cities that is dynamically updated. The
+                            past searches are saved and can be reused as the search input by clicking on them.</p>
+                        <h6>Technologies & Tools:</h6>
+                        <p>HTML, CSS, JavaScript, JQuery, API, Moment.js, Bootstrap</p>
+                        <div class="uk-card-footer">
+
+                            <a href="https://github.com/lindsfitz/wackywiki" target="_blank"
+                                class="uk-icon-button uk-margin-small-right" uk-icon="code"></a>
+                            <a href="https://evanhosni.github.io/wackywiki/" target="_blank" class="uk-icon-button"
+                                uk-icon="push"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="portfolio-content">
 
             <div class="primary">
 
-                <a href="https://evanhosni.github.io/wackywiki/" target="_blank"><img alt="#"
+                <a href="https://github.com/lindsfitz/wackywiki" target="_blank"><img alt="#"
                         src="assets/images/wackywiki1.jpg"></a>
 
                 <div class="primary-details">
@@ -73,7 +247,7 @@
                     <p>HTML, CSS, JavaScript, JQuery, APIs, Bulma, Text-to-Speech</p>
                     <div class="proj-btns">
                         <div class="proj-links">
-                            <a href="https://github.com/evanhosni/wackywiki" target="_blank"><span
+                            <a href="https://github.com/lindsfitz/wackywiki" target="_blank"><span
                                     class="material-icons">code</span></a>
                             <br>
                             <p>Github Repository</p>
@@ -92,7 +266,7 @@
             <div class="secondary">
                 <div class="child">
 
-                    <a href="https://lindsfitz.github.io/weather-dashboard/" target="_blank"><img alt="#"
+                    <a href="https://github.com/lindsfitz/bulletjournal" target="_blank"><img alt="#"
                             src="assets/images/weather-mockup.jpg"></a>
 
                     <div class="secondary-details">
@@ -104,13 +278,13 @@
                         <p>HTML, CSS, JavaScript, JQuery, API, Moment.js, Bootstrap</p>
                         <div class="proj-btns">
                             <div class="proj-links">
-                                <a href="https://github.com/lindsfitz/weather-dashboard" target="_blank"><span
+                                <a href="https://github.com/lindsfitz/bulletjournal" target="_blank"><span
                                         class="material-icons">code</span></a>
                                 <br>
                                 <p>Github Repository</p>
                             </div>
                             <div class="proj-links">
-                                <a href="https://lindsfitz.github.io/weather-dashboard/" target="_blank"><span
+                                <a href="https://bullet-journal-squared.herokuapp.com/" target="_blank"><span
                                         class="material-icons">open_in_browser</span></a>
                                 <br>
                                 <p>View Webpage</p>
@@ -150,9 +324,9 @@
 
                 </div>
             </div>
-        </div>
+        </div> -->
 
-    </section>
+
     <br><br><br>
     <section id="contact-me">
         <h2>CONTACT ME</h2>
